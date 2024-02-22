@@ -42,7 +42,7 @@ public class DVT extends javax.swing.JFrame {
         DateTextBox = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         GradeTextBox = new javax.swing.JTextField();
-        TimeTextBox = new javax.swing.JTextField();
+        HourTextBox = new javax.swing.JTextField();
         FirstNameTextBox = new javax.swing.JTextField();
         LastNameTextBox = new javax.swing.JTextField();
         BookNowButton = new javax.swing.JButton();
@@ -53,6 +53,10 @@ public class DVT extends javax.swing.JFrame {
         GradeErrorMessage = new javax.swing.JLabel();
         DateErrorMessage = new javax.swing.JLabel();
         JobSuccesfulMessage = new javax.swing.JLabel();
+        MinTextBox = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -111,16 +115,16 @@ public class DVT extends javax.swing.JFrame {
             }
         });
 
-        TimeTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        TimeTextBox.setForeground(new java.awt.Color(153, 153, 153));
-        TimeTextBox.addActionListener(new java.awt.event.ActionListener() {
+        HourTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        HourTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        HourTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TimeTextBoxActionPerformed(evt);
+                HourTextBoxActionPerformed(evt);
             }
         });
-        TimeTextBox.addKeyListener(new java.awt.event.KeyAdapter() {
+        HourTextBox.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                TimeTextBoxKeyPressed(evt);
+                HourTextBoxKeyPressed(evt);
             }
         });
 
@@ -181,82 +185,124 @@ public class DVT extends javax.swing.JFrame {
         JobSuccesfulMessage.setForeground(new java.awt.Color(51, 204, 0));
         JobSuccesfulMessage.setText("        ");
 
+        MinTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        MinTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        MinTextBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MinTextBoxActionPerformed(evt);
+            }
+        });
+        MinTextBox.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                MinTextBoxKeyPressed(evt);
+            }
+        });
+
+        jLabel10.setText(":");
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Hours : 5am-7pm");
+        jScrollPane1.setViewportView(jTextArea1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(jLabel8)
-                .addGap(101, 101, 101)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2)
-                .addGap(22, 22, 22)
-                .addComponent(FirstNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(30, 30, 30)
-                        .addComponent(jLabel9))
-                    .addComponent(FirstNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel3)
+                        .addGap(21, 21, 21)
+                        .addComponent(LastNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(LastNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel5)
+                        .addGap(16, 16, 16)
+                        .addComponent(GradeTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(GradeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel4)
+                        .addGap(18, 18, 18)
+                        .addComponent(SubjectList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(jLabel6)
+                        .addGap(23, 23, 23)
+                        .addComponent(DateTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addComponent(DateErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addComponent(PastPaperChecker))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel7)
+                                .addGap(18, 18, 18)
+                                .addComponent(HourTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(MinTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(232, 232, 232))
+                            .addComponent(BookNowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(JobSuccesfulMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(TimeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3)
-                .addGap(21, 21, 21)
-                .addComponent(LastNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(LastNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel5)
-                .addGap(16, 16, 16)
-                .addComponent(GradeTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(80, 80, 80)
-                .addComponent(GradeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(SubjectList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel6)
-                .addGap(23, 23, 23)
-                .addComponent(DateTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(DateErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jLabel7)
-                .addGap(21, 21, 21)
-                .addComponent(TimeTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(10, 10, 10)
-                .addComponent(TimeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(PastPaperChecker))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(BookNowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
-                .addComponent(JobSuccesfulMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(69, 69, 69)
+                        .addComponent(jLabel8)
+                        .addGap(101, 101, 101)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel2)
+                        .addGap(22, 22, 22)
+                        .addComponent(FirstNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jLabel9))
+                            .addComponent(FirstNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(61, 61, 61))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(FirstNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9)
-                    .addComponent(FirstNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2)
+                            .addComponent(FirstNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(FirstNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(10, 10, 10))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(LastNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -277,12 +323,15 @@ public class DVT extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(DateTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(DateErrorMessage))
-                .addGap(20, 20, 20)
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(TimeTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel7)
+                        .addComponent(HourTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel10)
+                        .addComponent(MinTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(TimeErrorMessage))
-                .addGap(20, 20, 20)
+                .addGap(21, 21, 21)
                 .addComponent(PastPaperChecker)
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -307,9 +356,9 @@ public class DVT extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_GradeTextBoxActionPerformed
 
-    private void TimeTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TimeTextBoxActionPerformed
+    private void HourTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HourTextBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_TimeTextBoxActionPerformed
+    }//GEN-LAST:event_HourTextBoxActionPerformed
 
     private void FirstNameTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTextBoxActionPerformed
         // TODO add your handling code here:
@@ -345,25 +394,35 @@ public class DVT extends javax.swing.JFrame {
    
     }//GEN-LAST:event_DateTextBoxKeyPressed
 
-    private void TimeTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TimeTextBoxKeyPressed
+    private void HourTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_HourTextBoxKeyPressed
         // TODO add your handling code here:
      
-    }//GEN-LAST:event_TimeTextBoxKeyPressed
+    }//GEN-LAST:event_HourTextBoxKeyPressed
 
     private void BookNowButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookNowButtonMouseClicked
        
         boolean pastpaper = PastPaperChecker.isSelected();
         
-       
         //Format Check
         if(!Validator.ValidateDateFormat(DateTextBox.getText())){
             DateErrorMessage.setText("Please Input the correct Format of the Date");
         }
         
+        //Logic Check
+        
+        
+        
+        
+        //Range Check
+        if(!Validator.ValidateRange(Integer.parseInt(GradeTextBox.getText()), 1, 12)){
+           GradeErrorMessage.setText("Please input a valid Grade");
+        }
+        if(!Validator.ValidateRange(Integer.parseInt(HourTextBox.getText()), 05, 19)){
+            TimeErrorMessage.setText("Please input a valid Time");
+        }
         
         
         //Presence Check
-        
         if (FirstNameTextBox.getText().equalsIgnoreCase("")){
             FirstNameErrorMessage.setText("Enter First Name");
         }
@@ -380,7 +439,7 @@ public class DVT extends javax.swing.JFrame {
             DateErrorMessage.setText("Enter Date");
         }
         
-        if (TimeTextBox.getText().equalsIgnoreCase("")){
+        if (HourTextBox.getText().equalsIgnoreCase("")){
             TimeErrorMessage.setText("Enter Time");
         }
         
@@ -395,6 +454,14 @@ public class DVT extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_BookNowButtonMouseClicked
+
+    private void MinTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinTextBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinTextBoxActionPerformed
+
+    private void MinTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MinTextBoxKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MinTextBoxKeyPressed
   
     /**
      * @param args the command line arguments
@@ -447,14 +514,16 @@ public class DVT extends javax.swing.JFrame {
     private javax.swing.JTextField FirstNameTextBox;
     private javax.swing.JLabel GradeErrorMessage;
     private javax.swing.JTextField GradeTextBox;
+    private javax.swing.JTextField HourTextBox;
     private javax.swing.JLabel JobSuccesfulMessage;
     private javax.swing.JLabel LastNameErrorMessage;
     private javax.swing.JTextField LastNameTextBox;
+    private javax.swing.JTextField MinTextBox;
     private javax.swing.JCheckBox PastPaperChecker;
     private javax.swing.JComboBox<String> SubjectList;
     private javax.swing.JLabel TimeErrorMessage;
-    private javax.swing.JTextField TimeTextBox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -463,5 +532,7 @@ public class DVT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

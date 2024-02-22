@@ -19,19 +19,17 @@ import java.util.Date;
 public class Validator {
    
     
-    public boolean ValidateGradeRange(int grade){
-        
+    public static boolean ValidateRange(int var, int min, int max){
         boolean validation = false;
-        
-        if(grade <=12 && grade >= 1){
-            
+        if(var <=12 && var >= 1){
             validation = true;
         }
-        
-        
-        
         return validation;
     }
+    
+     
+    
+    
     
     public static boolean ValidateDateFormat(String dateStr){
         
@@ -48,13 +46,13 @@ public class Validator {
     return validation;
     }
     
-    public boolean ValidateTimeFormat(){
+    public static boolean ValidateTimeFormat(){
         
         
         return true;
     }
     
-    public boolean ValidateLogic(){
+    public static boolean ValidateLogic(){
         
         return true;
     }
