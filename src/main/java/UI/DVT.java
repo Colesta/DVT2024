@@ -55,31 +55,39 @@ public class DVT extends javax.swing.JFrame {
         JobSuccesfulMessage = new javax.swing.JLabel();
         MinTextBox = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Tutor Booking");
         jLabel1.setMaximumSize(new java.awt.Dimension(75, 56));
         jLabel1.setMinimumSize(new java.awt.Dimension(75, 56));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
 
         jLabel2.setText("First Name:");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 110, -1, -1));
 
         jLabel3.setText("Last Name:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
         jLabel4.setText("Subject:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         jLabel5.setText("Grade:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
 
         jLabel6.setText("Date:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
 
         jLabel7.setText("Time:");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
 
         SubjectList.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         SubjectList.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Math", "Afrikaans", "English", "Coding", "Art", "Physics", "Biology", "Geography", "History" }));
+        getContentPane().add(SubjectList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
 
         PastPaperChecker.setText("Past papers required?");
         PastPaperChecker.addActionListener(new java.awt.event.ActionListener() {
@@ -87,6 +95,7 @@ public class DVT extends javax.swing.JFrame {
                 PastPaperCheckerActionPerformed(evt);
             }
         });
+        getContentPane().add(PastPaperChecker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
 
         DateTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         DateTextBox.setForeground(new java.awt.Color(153, 153, 153));
@@ -101,6 +110,8 @@ public class DVT extends javax.swing.JFrame {
                 DateTextBoxKeyPressed(evt);
             }
         });
+        getContentPane().add(DateTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 120, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 40, -1, -1));
 
         GradeTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         GradeTextBox.setForeground(new java.awt.Color(153, 153, 153));
@@ -114,6 +125,7 @@ public class DVT extends javax.swing.JFrame {
                 GradeTextBoxKeyPressed(evt);
             }
         });
+        getContentPane().add(GradeTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 50, -1));
 
         HourTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         HourTextBox.setForeground(new java.awt.Color(153, 153, 153));
@@ -127,6 +139,7 @@ public class DVT extends javax.swing.JFrame {
                 HourTextBoxKeyPressed(evt);
             }
         });
+        getContentPane().add(HourTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 309, 30, -1));
 
         FirstNameTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         FirstNameTextBox.setForeground(new java.awt.Color(153, 153, 153));
@@ -145,6 +158,7 @@ public class DVT extends javax.swing.JFrame {
                 FirstNameTextBoxKeyPressed(evt);
             }
         });
+        getContentPane().add(FirstNameTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 120, -1));
 
         LastNameTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         LastNameTextBox.setForeground(new java.awt.Color(153, 153, 153));
@@ -158,6 +172,7 @@ public class DVT extends javax.swing.JFrame {
                 LastNameTextBoxKeyPressed(evt);
             }
         });
+        getContentPane().add(LastNameTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 120, -1));
 
         BookNowButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         BookNowButton.setText("Book Now");
@@ -166,24 +181,32 @@ public class DVT extends javax.swing.JFrame {
                 BookNowButtonMouseClicked(evt);
             }
         });
+        getContentPane().add(BookNowButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 230, 70));
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
         TimeErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         TimeErrorMessage.setText("    ");
+        getContentPane().add(TimeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 260, -1));
 
         FirstNameErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         FirstNameErrorMessage.setText("    ");
+        getContentPane().add(FirstNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 260, 20));
 
         LastNameErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         LastNameErrorMessage.setText("     ");
+        getContentPane().add(LastNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 260, -1));
 
         GradeErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         GradeErrorMessage.setText("     ");
+        getContentPane().add(GradeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 260, 20));
 
         DateErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         DateErrorMessage.setText("    ");
+        getContentPane().add(DateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 260, -1));
 
         JobSuccesfulMessage.setForeground(new java.awt.Color(51, 204, 0));
         JobSuccesfulMessage.setText("        ");
+        getContentPane().add(JobSuccesfulMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(434, 430, 150, -1));
 
         MinTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         MinTextBox.setForeground(new java.awt.Color(153, 153, 153));
@@ -197,149 +220,13 @@ public class DVT extends javax.swing.JFrame {
                 MinTextBoxKeyPressed(evt);
             }
         });
+        getContentPane().add(MinTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 309, 30, -1));
 
         jLabel10.setText(":");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 310, -1, -1));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Hours : 5am-7pm");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel3)
-                        .addGap(21, 21, 21)
-                        .addComponent(LastNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(LastNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel5)
-                        .addGap(16, 16, 16)
-                        .addComponent(GradeTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(80, 80, 80)
-                        .addComponent(GradeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(SubjectList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(jLabel6)
-                        .addGap(23, 23, 23)
-                        .addComponent(DateTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(DateErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addComponent(PastPaperChecker))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(18, 18, 18)
-                                .addComponent(HourTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(MinTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(232, 232, 232))
-                            .addComponent(BookNowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(JobSuccesfulMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TimeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(69, 69, 69)
-                        .addComponent(jLabel8)
-                        .addGap(101, 101, 101)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jLabel2)
-                        .addGap(22, 22, 22)
-                        .addComponent(FirstNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jLabel9))
-                            .addComponent(FirstNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(FirstNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)
-                            .addComponent(FirstNameErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(10, 10, 10))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(LastNameTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LastNameErrorMessage))
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(GradeTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(GradeErrorMessage, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4)
-                    .addComponent(SubjectList, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(DateTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DateErrorMessage))
-                .addGap(19, 19, 19)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel7)
-                        .addComponent(HourTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel10)
-                        .addComponent(MinTextBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(TimeErrorMessage))
-                .addGap(21, 21, 21)
-                .addComponent(PastPaperChecker)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(BookNowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(JobSuccesfulMessage))))
-        );
+        jLabel11.setText("Hours : 5am-7pm");
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -409,7 +296,7 @@ public class DVT extends javax.swing.JFrame {
         }
         
         //Logic Check
-        
+        if(Validator.ValidateDateFormat(DateTextBox.getText()) && !Validator.ValidateLogic(dateStr))
         
         
         
@@ -440,9 +327,14 @@ public class DVT extends javax.swing.JFrame {
         }
         
         if (HourTextBox.getText().equalsIgnoreCase("")){
+            TimeErrorMessage.setText("Enter Hour");
+        }
+        if (MinTextBox.getText().equalsIgnoreCase("")){
+            TimeErrorMessage.setText("Enter Minute");
+        }
+        if (HourTextBox.getText().equalsIgnoreCase("") && MinTextBox.getText().equalsIgnoreCase("") ){
             TimeErrorMessage.setText("Enter Time");
         }
-        
         
         
         
@@ -524,6 +416,7 @@ public class DVT extends javax.swing.JFrame {
     private javax.swing.JLabel TimeErrorMessage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -532,7 +425,5 @@ public class DVT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     // End of variables declaration//GEN-END:variables
 }

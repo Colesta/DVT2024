@@ -21,7 +21,7 @@ public class Validator {
     
     public static boolean ValidateRange(int var, int min, int max){
         boolean validation = false;
-        if(var <=12 && var >= 1){
+        if(var <=max && var >= min){
             validation = true;
         }
         return validation;
@@ -52,9 +52,17 @@ public class Validator {
         return true;
     }
     
-    public static boolean ValidateLogic(){
+    public static boolean ValidateLogic(String dateStr){
         
-        return true;
+         boolean validation = false;
+         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+         LocalDate date = LocalDate.parse(dateStr, dtf);
+         
+         if(date.getYear() < 2024){
+             validation = true;
+         }
+        
+        return validation;
     }
     
 }
