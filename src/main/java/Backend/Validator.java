@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Date;
@@ -23,7 +24,7 @@ public class Validator {
             int var = Integer.parseInt(input);
             return var >= min && var <= max;
         } catch (NumberFormatException e) {
-            return false; // Return false if input cannot be parsed as an integer
+            return false; 
         }
     }
 
@@ -42,18 +43,14 @@ public class Validator {
         return validation;
     }
 
-    public static boolean ValidateTimeFormat() {
-
-        return true;
-    }
-
     public static boolean ValidateLogic(String dateStr) {
 
         boolean validation = false;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate present = LocalDate.now();
         LocalDate date = LocalDate.parse(dateStr, dtf);
 
-        if (date.getYear() >= 2024) {
+        if (date.isAfter(present)) {
             validation = true;
         }
 
@@ -75,5 +72,14 @@ public class Validator {
 
         return valid;
     }
+    
+//    public static boolean ValidateTimeRange(String input, LocalTime min, LocalTime max){
+//         try {
+//            int var = Integer.parseInt(input);
+//            return var >= min && var <= max;
+//        } catch (NumberFormatException e) {
+//            return false; 
+//        }
+//    }
 
 }

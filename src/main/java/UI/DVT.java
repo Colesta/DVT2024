@@ -215,33 +215,33 @@ public class DVT extends javax.swing.JFrame {
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
         TimeErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        TimeErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
+        TimeErrorMessage.setForeground(new java.awt.Color(214, 0, 0));
         TimeErrorMessage.setText("    ");
         getContentPane().add(TimeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 380, -1));
 
         FirstNameErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        FirstNameErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
+        FirstNameErrorMessage.setForeground(new java.awt.Color(214, 0, 0));
         FirstNameErrorMessage.setText("    ");
         getContentPane().add(FirstNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 380, 20));
 
         LastNameErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        LastNameErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
+        LastNameErrorMessage.setForeground(new java.awt.Color(214, 0, 0));
         LastNameErrorMessage.setText("     ");
         getContentPane().add(LastNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 380, -1));
 
         GradeErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        GradeErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
+        GradeErrorMessage.setForeground(new java.awt.Color(214, 0, 0));
         GradeErrorMessage.setText("     ");
         getContentPane().add(GradeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 380, 20));
 
         DateErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
-        DateErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
+        DateErrorMessage.setForeground(new java.awt.Color(214, 0, 0));
         DateErrorMessage.setText("    ");
         getContentPane().add(DateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 380, -1));
 
-        SuccesfulMessage.setForeground(new java.awt.Color(51, 204, 0));
-        SuccesfulMessage.setText("        ");
-        getContentPane().add(SuccesfulMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(434, 430, 150, -1));
+        SuccesfulMessage.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
+        SuccesfulMessage.setForeground(new java.awt.Color(63, 255, 0));
+        getContentPane().add(SuccesfulMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(434, 440, 150, 70));
 
         MinTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         MinTextBox.setForeground(new java.awt.Color(0, 0, 0));
@@ -257,8 +257,10 @@ public class DVT extends javax.swing.JFrame {
         });
         getContentPane().add(MinTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 30, -1));
 
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText(":");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 345, 10, 30));
 
         jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Peters\\Documents\\NetBeansProjects\\DVT2024\\resources\\Looking-for-a-tutor.jpg")); // NOI18N
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 630, 150));
@@ -414,7 +416,7 @@ public class DVT extends javax.swing.JFrame {
         output += PastPaperChecker.isSelected();
         if(fNameCheck && lNameCheck && GradeCheck && DateCheck && TimeCheck){
             System.out.println(output);
-            SuccesfulMessage.setText("Booked Succesfully");
+            SuccesfulMessage.setText("Booked Successfully!");
         }
     }//GEN-LAST:event_BookNowButtonMouseClicked
 
