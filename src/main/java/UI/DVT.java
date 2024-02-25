@@ -31,6 +31,7 @@ public class DVT extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -52,53 +53,75 @@ public class DVT extends javax.swing.JFrame {
         LastNameErrorMessage = new javax.swing.JLabel();
         GradeErrorMessage = new javax.swing.JLabel();
         DateErrorMessage = new javax.swing.JLabel();
-        JobSuccesfulMessage = new javax.swing.JLabel();
+        SuccesfulMessage = new javax.swing.JLabel();
         MinTextBox = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 204, 204));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(255, 101, 50));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Tutor Booking");
         jLabel1.setMaximumSize(new java.awt.Dimension(75, 56));
         jLabel1.setMinimumSize(new java.awt.Dimension(75, 56));
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, -1, -1));
 
+        jPanel2.setBackground(new java.awt.Color(255, 143, 68));
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        jPanel2.setForeground(new java.awt.Color(255, 51, 51));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 340, 60));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("First Name:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 110, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Last Name:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Subject:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Grade:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, -1, -1));
 
+        jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Date:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Time:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
 
         SubjectList.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         SubjectList.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Math", "Afrikaans", "English", "Coding", "Art", "Physics", "Biology", "Geography", "History" }));
-        getContentPane().add(SubjectList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, -1, -1));
+        getContentPane().add(SubjectList, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, -1, -1));
 
+        PastPaperChecker.setFont(new java.awt.Font("Segoe UI Black", 1, 13)); // NOI18N
+        PastPaperChecker.setForeground(new java.awt.Color(0, 0, 0));
         PastPaperChecker.setText("Past papers required?");
         PastPaperChecker.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PastPaperCheckerActionPerformed(evt);
             }
         });
-        getContentPane().add(PastPaperChecker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, -1, -1));
+        getContentPane().add(PastPaperChecker, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 390, -1, -1));
 
         DateTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        DateTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        DateTextBox.setForeground(new java.awt.Color(0, 0, 0));
         DateTextBox.setToolTipText("");
         DateTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,11 +133,11 @@ public class DVT extends javax.swing.JFrame {
                 DateTextBoxKeyPressed(evt);
             }
         });
-        getContentPane().add(DateTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 120, -1));
+        getContentPane().add(DateTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 120, -1));
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 40, -1, -1));
 
         GradeTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        GradeTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        GradeTextBox.setForeground(new java.awt.Color(0, 0, 0));
         GradeTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GradeTextBoxActionPerformed(evt);
@@ -125,10 +148,10 @@ public class DVT extends javax.swing.JFrame {
                 GradeTextBoxKeyPressed(evt);
             }
         });
-        getContentPane().add(GradeTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 50, -1));
+        getContentPane().add(GradeTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 50, -1));
 
         HourTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        HourTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        HourTextBox.setForeground(new java.awt.Color(0, 0, 0));
         HourTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 HourTextBoxActionPerformed(evt);
@@ -139,10 +162,10 @@ public class DVT extends javax.swing.JFrame {
                 HourTextBoxKeyPressed(evt);
             }
         });
-        getContentPane().add(HourTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(107, 309, 30, -1));
+        getContentPane().add(HourTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 350, 30, -1));
 
         FirstNameTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        FirstNameTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        FirstNameTextBox.setForeground(new java.awt.Color(0, 0, 0));
         FirstNameTextBox.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 FirstNameTextBoxMouseClicked(evt);
@@ -158,10 +181,10 @@ public class DVT extends javax.swing.JFrame {
                 FirstNameTextBoxKeyPressed(evt);
             }
         });
-        getContentPane().add(FirstNameTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 120, -1));
+        getContentPane().add(FirstNameTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 120, -1));
 
         LastNameTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        LastNameTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        LastNameTextBox.setForeground(new java.awt.Color(0, 0, 0));
         LastNameTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LastNameTextBoxActionPerformed(evt);
@@ -172,44 +195,56 @@ public class DVT extends javax.swing.JFrame {
                 LastNameTextBoxKeyPressed(evt);
             }
         });
-        getContentPane().add(LastNameTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 120, -1));
+        getContentPane().add(LastNameTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 120, -1));
 
+        BookNowButton.setBackground(new java.awt.Color(255, 102, 0));
         BookNowButton.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        BookNowButton.setForeground(new java.awt.Color(0, 0, 0));
         BookNowButton.setText("Book Now");
         BookNowButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 BookNowButtonMouseClicked(evt);
             }
         });
-        getContentPane().add(BookNowButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 380, 230, 70));
+        BookNowButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BookNowButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BookNowButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 230, 70));
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 110, -1, -1));
 
+        TimeErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         TimeErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         TimeErrorMessage.setText("    ");
-        getContentPane().add(TimeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 260, -1));
+        getContentPane().add(TimeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 380, -1));
 
+        FirstNameErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         FirstNameErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         FirstNameErrorMessage.setText("    ");
-        getContentPane().add(FirstNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 260, 20));
+        getContentPane().add(FirstNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 380, 20));
 
+        LastNameErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         LastNameErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         LastNameErrorMessage.setText("     ");
-        getContentPane().add(LastNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 260, -1));
+        getContentPane().add(LastNameErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 380, -1));
 
+        GradeErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         GradeErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         GradeErrorMessage.setText("     ");
-        getContentPane().add(GradeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 260, 20));
+        getContentPane().add(GradeErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 380, 20));
 
+        DateErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         DateErrorMessage.setForeground(new java.awt.Color(255, 0, 0));
         DateErrorMessage.setText("    ");
-        getContentPane().add(DateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, 260, -1));
+        getContentPane().add(DateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 380, -1));
 
-        JobSuccesfulMessage.setForeground(new java.awt.Color(51, 204, 0));
-        JobSuccesfulMessage.setText("        ");
-        getContentPane().add(JobSuccesfulMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(434, 430, 150, -1));
+        SuccesfulMessage.setForeground(new java.awt.Color(51, 204, 0));
+        SuccesfulMessage.setText("        ");
+        getContentPane().add(SuccesfulMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(434, 430, 150, -1));
 
         MinTextBox.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        MinTextBox.setForeground(new java.awt.Color(153, 153, 153));
+        MinTextBox.setForeground(new java.awt.Color(0, 0, 0));
         MinTextBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinTextBoxActionPerformed(evt);
@@ -220,13 +255,17 @@ public class DVT extends javax.swing.JFrame {
                 MinTextBoxKeyPressed(evt);
             }
         });
-        getContentPane().add(MinTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(152, 309, 30, -1));
+        getContentPane().add(MinTextBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 350, 30, -1));
 
         jLabel10.setText(":");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(143, 310, -1, -1));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
 
-        jLabel11.setText("Hours : 5am-7pm");
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Peters\\Documents\\NetBeansProjects\\DVT2024\\resources\\Looking-for-a-tutor.jpg")); // NOI18N
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 630, 150));
+
+        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        jPanel1.setForeground(new java.awt.Color(0, 204, 204));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 630, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -249,7 +288,7 @@ public class DVT extends javax.swing.JFrame {
 
     private void FirstNameTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FirstNameTextBoxActionPerformed
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_FirstNameTextBoxActionPerformed
 
     private void LastNameTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LastNameTextBoxActionPerformed
@@ -258,93 +297,125 @@ public class DVT extends javax.swing.JFrame {
 
     private void FirstNameTextBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FirstNameTextBoxMouseClicked
         // TODO add your handling code here:
-       
+
     }//GEN-LAST:event_FirstNameTextBoxMouseClicked
 
     private void FirstNameTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_FirstNameTextBoxKeyPressed
         // TODO add your handling code here:
-        
+
     }//GEN-LAST:event_FirstNameTextBoxKeyPressed
 
     private void LastNameTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_LastNameTextBoxKeyPressed
         // TODO add your handling code here:
-         
+
     }//GEN-LAST:event_LastNameTextBoxKeyPressed
 
     private void GradeTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_GradeTextBoxKeyPressed
         // TODO add your handling code here:
-    
+
     }//GEN-LAST:event_GradeTextBoxKeyPressed
 
     private void DateTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_DateTextBoxKeyPressed
         // TODO add your handling code here:
-   
+
     }//GEN-LAST:event_DateTextBoxKeyPressed
 
     private void HourTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_HourTextBoxKeyPressed
         // TODO add your handling code here:
-     
+
     }//GEN-LAST:event_HourTextBoxKeyPressed
 
     private void BookNowButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BookNowButtonMouseClicked
-       
-        boolean pastpaper = PastPaperChecker.isSelected();
-        
-        //Format Check
-        if(!Validator.ValidateDateFormat(DateTextBox.getText())){
-            DateErrorMessage.setText("Please Input the correct Format of the Date");
+
+        String output = "";
+        boolean fNameCheck = false;
+        boolean lNameCheck = false;
+        boolean GradeCheck = false;
+        boolean DateCheck = false;
+        boolean TimeCheck = false;
+
+        if (FirstNameTextBox.getText().isEmpty()) {
+            FirstNameErrorMessage.setText("Please enter your First Name");
+        } else {
+            if (Validator.ValidateString(FirstNameTextBox.getText())) {
+                FirstNameErrorMessage.setText("");
+                output += FirstNameTextBox.getText() + "#";
+                fNameCheck = true;
+            } else {
+                FirstNameErrorMessage.setText("Please enter a valid Name ");
+            }
+        }
+
+        if (LastNameTextBox.getText().isEmpty()) {
+            LastNameErrorMessage.setText("Please enter your Last Name");
+        } else {
+            if (Validator.ValidateString(LastNameTextBox.getText())) {
+                LastNameErrorMessage.setText("");
+                output += LastNameTextBox.getText() + "#";
+                lNameCheck = true;
+            } else {
+                LastNameErrorMessage.setText("Please enter a valid Name");
+            }
+        }
+
+        if (GradeTextBox.getText().isEmpty()) {
+            GradeErrorMessage.setText("Please enter your Grade");
+        } else {
+            if (Validator.ValidateRange(GradeTextBox.getText(), 1, 12)) {
+                GradeErrorMessage.setText("");
+                output += GradeTextBox.getText() + "#";
+                GradeCheck = true;
+            } else {
+                GradeErrorMessage.setText("Please input a valid Grade (1 to 12)");
+            }
         }
         
-        //Logic Check
-        if(Validator.ValidateDateFormat(DateTextBox.getText()) && !Validator.ValidateLogic(dateStr))
-        
-        
-        
-        //Range Check
-        if(!Validator.ValidateRange(Integer.parseInt(GradeTextBox.getText()), 1, 12)){
-           GradeErrorMessage.setText("Please input a valid Grade");
+        output += SubjectList.getSelectedItem() + "#";
+
+        if (DateTextBox.getText().isEmpty()) {
+            DateErrorMessage.setText("Please enter the Date of your session");
+        } else {
+            if (Validator.ValidateDateFormat(DateTextBox.getText())) {
+
+                if (Validator.ValidateLogic(DateTextBox.getText())) {
+                    DateErrorMessage.setText("");
+                    output += DateTextBox.getText() + "#";
+                    DateCheck = true;
+
+                } else {
+                    DateErrorMessage.setText("Please enter a valid year");
+                }
+            } else {
+                DateErrorMessage.setText("Please Input the correct Format of the Date (eg. 02/05/2024)");
+            }
+
         }
-        if(!Validator.ValidateRange(Integer.parseInt(HourTextBox.getText()), 05, 19)){
-            TimeErrorMessage.setText("Please input a valid Time");
+
+        if (HourTextBox.getText().isEmpty()) {
+            TimeErrorMessage.setText("Please enter the Hour of your session");
         }
-        
-        
-        //Presence Check
-        if (FirstNameTextBox.getText().equalsIgnoreCase("")){
-            FirstNameErrorMessage.setText("Enter First Name");
-        }
-        
-        if (LastNameTextBox.getText().equalsIgnoreCase("")){
-            LastNameErrorMessage.setText("Enter Last Name");
-        }
-        
-        if (GradeTextBox.getText().equalsIgnoreCase("")){
-            GradeErrorMessage.setText("Enter Grade");
-        }
-        
-        if (DateTextBox.getText().equalsIgnoreCase("")){
-            DateErrorMessage.setText("Enter Date");
+        if (MinTextBox.getText().isEmpty()) {
+            TimeErrorMessage.setText("Please enter the Minutes of your session");
         }
         
-        if (HourTextBox.getText().equalsIgnoreCase("")){
-            TimeErrorMessage.setText("Enter Hour");
+        if (HourTextBox.getText().isEmpty() && MinTextBox.getText().isEmpty()) {
+            TimeErrorMessage.setText("Please enter the Time of your session");
+        } else {
+            if (Validator.ValidateRange(HourTextBox.getText(), 5, 19) && Validator.ValidateRange(MinTextBox.getText(), 0, 59)) {
+                TimeErrorMessage.setText("");
+                output += HourTextBox.getText()+":"+ MinTextBox.getText() +"#";
+                TimeCheck = true;
+            } else {
+                TimeErrorMessage.setText("Please choose a Time between 05h00 and 19h00");
+            }
         }
-        if (MinTextBox.getText().equalsIgnoreCase("")){
-            TimeErrorMessage.setText("Enter Minute");
+
+        
+        output += PastPaperChecker.isSelected();
+        if(fNameCheck && lNameCheck && GradeCheck && DateCheck && TimeCheck){
+            System.out.println(output);
+            SuccesfulMessage.setText("Booked Succesfully");
         }
-        if (HourTextBox.getText().equalsIgnoreCase("") && MinTextBox.getText().equalsIgnoreCase("") ){
-            TimeErrorMessage.setText("Enter Time");
-        }
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
     }//GEN-LAST:event_BookNowButtonMouseClicked
 
     private void MinTextBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MinTextBoxActionPerformed
@@ -354,24 +425,21 @@ public class DVT extends javax.swing.JFrame {
     private void MinTextBoxKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_MinTextBoxKeyPressed
         // TODO add your handling code here:
     }//GEN-LAST:event_MinTextBoxKeyPressed
-  
+
+    private void BookNowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BookNowButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BookNowButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        
-       
-        
-        
-        
-        
-        
+
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -407,12 +475,12 @@ public class DVT extends javax.swing.JFrame {
     private javax.swing.JLabel GradeErrorMessage;
     private javax.swing.JTextField GradeTextBox;
     private javax.swing.JTextField HourTextBox;
-    private javax.swing.JLabel JobSuccesfulMessage;
     private javax.swing.JLabel LastNameErrorMessage;
     private javax.swing.JTextField LastNameTextBox;
     private javax.swing.JTextField MinTextBox;
     private javax.swing.JCheckBox PastPaperChecker;
     private javax.swing.JComboBox<String> SubjectList;
+    private javax.swing.JLabel SuccesfulMessage;
     private javax.swing.JLabel TimeErrorMessage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -425,5 +493,7 @@ public class DVT extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
