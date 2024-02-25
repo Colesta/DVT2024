@@ -237,7 +237,7 @@ public class DVT extends javax.swing.JFrame {
         DateErrorMessage.setFont(new java.awt.Font("SansSerif", 1, 12)); // NOI18N
         DateErrorMessage.setForeground(new java.awt.Color(214, 0, 0));
         DateErrorMessage.setText("    ");
-        getContentPane().add(DateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 380, -1));
+        getContentPane().add(DateErrorMessage, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 310, 380, 40));
 
         SuccesfulMessage.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         SuccesfulMessage.setForeground(new java.awt.Color(63, 255, 0));
@@ -344,7 +344,7 @@ public class DVT extends javax.swing.JFrame {
                 output += FirstNameTextBox.getText() + "#";
                 fNameCheck = true;
             } else {
-                FirstNameErrorMessage.setText("Please enter a valid Name ");
+                FirstNameErrorMessage.setText("Please enter a valid First Name");
             }
         }
 
@@ -356,7 +356,7 @@ public class DVT extends javax.swing.JFrame {
                 output += LastNameTextBox.getText() + "#";
                 lNameCheck = true;
             } else {
-                LastNameErrorMessage.setText("Please enter a valid Name");
+                LastNameErrorMessage.setText("Please enter a valid Last Name");
             }
         }
 
@@ -408,7 +408,7 @@ public class DVT extends javax.swing.JFrame {
                 output += HourTextBox.getText()+":"+ MinTextBox.getText() +"#";
                 TimeCheck = true;
             } else {
-                TimeErrorMessage.setText("Please choose a Time between 05h00 and 19h00");
+                TimeErrorMessage.setText("Enter a Time between 5:00 and 19:00 in the Correct Format");
             }
         }
 
