@@ -12,14 +12,14 @@ import Backend.Validator;
  */
 public class test {
     public static void main(String[] args) {
-//        String date1 = "3 February 1997";
-//        String date2 = "01/02/2024";
-//        if(Validator.ValidateDateFormat(date2)){
-//            System.out.println("True");
-//        }else{
-//            System.out.println("False");
+        String date1 = "3 February 1997";
+        String date2 = "01/02/2024";
+        if(Validator.ValidateDateFormat(date2)){
+            System.out.println("True");
+        }else{
+            System.out.println("False");
         
-        //System.out.println(ValidateRange("ff", 1, 12));
+        System.out.println(ValidateRange("ff", 1, 12));
         System.out.println(ValidateString("Cole"));
             
             
@@ -30,7 +30,7 @@ public class test {
         int var = Integer.parseInt(input);
         return var >= min && var <= max;
     } catch (NumberFormatException e) {
-        return false; // Return false if input cannot be parsed as an integer
+        return false; 
     }
 }
      public static boolean ValidateString(String input) {
