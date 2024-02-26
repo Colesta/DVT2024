@@ -73,13 +73,5 @@ public class Validator {
         return valid;
     }
     
-//    public static boolean ValidateTimeRange(String input, LocalTime min, LocalTime max){
-//         try {
-//            int var = Integer.parseInt(input);
-//            return var >= min && var <= max;
-//        } catch (NumberFormatException e) {
-//            return false; 
-//        }
-//    }
 
 }
